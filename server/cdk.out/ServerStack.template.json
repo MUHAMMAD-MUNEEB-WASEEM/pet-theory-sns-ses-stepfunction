@@ -1,0 +1,1391 @@
+{
+  "Resources": {
+    "ApiF70053CD": {
+      "Type": "AWS::AppSync::GraphQLApi",
+      "Properties": {
+        "AuthenticationType": "API_KEY",
+        "Name": "appsyncEventbridgeAPI"
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/Resource"
+      }
+    },
+    "ApiSchema510EECD7": {
+      "Type": "AWS::AppSync::GraphQLSchema",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "Definition": "type Event {\r\n  result: String\r\n}\r\n\r\ntype report {\r\n  id: String\r\n  name: String\r\n  message: String\r\n \r\n}\r\n\r\ninput ReportInput {\r\n  id: String\r\n  name: String\r\n  email: String\r\n  message:String\r\n}\r\n\r\ntype Query {\r\n  getReports: [report]\r\n}\r\n\r\ntype Mutation {\r\n  addReport(report: ReportInput!): Event\r\n}"
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/Schema"
+      }
+    },
+    "ApiDefaultApiKeyF991C37B": {
+      "Type": "AWS::AppSync::ApiKey",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        }
+      },
+      "DependsOn": [
+        "ApiSchema510EECD7"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/DefaultApiKey"
+      }
+    },
+    "ApithePetTableServiceRoleA36CC740": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "appsync.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/thePetTable/ServiceRole/Resource"
+      }
+    },
+    "ApithePetTableServiceRoleDefaultPolicyD7E7D976": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "CDKPetTable901A88F2",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ApithePetTableServiceRoleDefaultPolicyD7E7D976",
+        "Roles": [
+          {
+            "Ref": "ApithePetTableServiceRoleA36CC740"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/thePetTable/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ApithePetTable3840958B": {
+      "Type": "AWS::AppSync::DataSource",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "Name": "thePetTable",
+        "Type": "AMAZON_DYNAMODB",
+        "DynamoDBConfig": {
+          "AwsRegion": {
+            "Ref": "AWS::Region"
+          },
+          "TableName": {
+            "Ref": "CDKPetTable901A88F2"
+          }
+        },
+        "ServiceRoleArn": {
+          "Fn::GetAtt": [
+            "ApithePetTableServiceRoleA36CC740",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/thePetTable/Resource"
+      }
+    },
+    "ApithePetTableQuerygetReportsResolver4632C2A2": {
+      "Type": "AWS::AppSync::Resolver",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "FieldName": "getReports",
+        "TypeName": "Query",
+        "DataSourceName": "thePetTable",
+        "Kind": "UNIT",
+        "RequestMappingTemplate": "{\"version\" : \"2017-02-28\", \"operation\" : \"Scan\"}",
+        "ResponseMappingTemplate": "$util.toJson($ctx.result.items)"
+      },
+      "DependsOn": [
+        "ApiSchema510EECD7",
+        "ApithePetTable3840958B"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/thePetTable/QuerygetReportsResolver/Resource"
+      }
+    },
+    "ApidsServiceRoleADC7D124": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "appsync.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/ds/ServiceRole/Resource"
+      }
+    },
+    "ApidsServiceRoleDefaultPolicyE5E18D6D": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "events:PutEvents",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ApidsServiceRoleDefaultPolicyE5E18D6D",
+        "Roles": [
+          {
+            "Ref": "ApidsServiceRoleADC7D124"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/ds/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "Apids0DB53FEA": {
+      "Type": "AWS::AppSync::DataSource",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "Name": "httpDsWithEventBridge",
+        "Type": "HTTP",
+        "Description": "From Appsync to Eventbridge",
+        "HttpConfig": {
+          "AuthorizationConfig": {
+            "AuthorizationType": "AWS_IAM",
+            "AwsIamConfig": {
+              "SigningRegion": {
+                "Ref": "AWS::Region"
+              },
+              "SigningServiceName": "events"
+            }
+          },
+          "Endpoint": {
+            "Fn::Join": [
+              "",
+              [
+                "https://events.",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ".amazonaws.com/"
+              ]
+            ]
+          }
+        },
+        "ServiceRoleArn": {
+          "Fn::GetAtt": [
+            "ApidsServiceRoleADC7D124",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/ds/Resource"
+      }
+    },
+    "ApidsMutationaddReportResolverC760D141": {
+      "Type": "AWS::AppSync::Resolver",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "FieldName": "addReport",
+        "TypeName": "Mutation",
+        "DataSourceName": "httpDsWithEventBridge",
+        "Kind": "UNIT",
+        "RequestMappingTemplate": "{\n          \"version\": \"2018-05-29\",\n          \"method\": \"POST\", \n          \"resourcePath\": \"/\",\n          \"params\": {\n            \"headers\": {\n              \"content-type\": \"application/x-amz-json-1.1\",\n              \"x-amz-target\":\"AWSEvents.PutEvents\"\n            },\n            \"body\": {\n              \"Entries\":[\n                {\n                  \"DetailType\":\"addReport\",\n                  \"Source\":\"PetEvents\",\n                  \"EventBusName\": \"default\",\n                  \"Detail\": \"{\\\"name\\\":\\\"$ctx.args.report.name\\\" , \\\"email\\\":\\\"$ctx.args.report.email\\\" , \\\"message\\\":\\\"$ctx.args.report.message\\\"}\"\n                }\n              ]\n            }\n          }\n        }",
+        "ResponseMappingTemplate": "\n          #if($ctx.error)\n              $util.error($ctx.error.message, $ctx.error.type)\n          #end\n          #if($ctx.result.statusCode == 200)\n          {\n              \"result\": \"$util.parseJson($ctx.result.body)\"\n          }\n          #else\n              $utils.appendError($ctx.result.body, $ctx.result.statusCode)\n          #end\n      "
+      },
+      "DependsOn": [
+        "Apids0DB53FEA",
+        "ApiSchema510EECD7"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/Api/ds/MutationaddReportResolver/Resource"
+      }
+    },
+    "CDKPetTable901A88F2": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "id",
+            "AttributeType": "S"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/CDKPetTable/Resource"
+      }
+    },
+    "AppSyncNotesHandlerServiceRole34415D7F": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/AppSyncNotesHandler/ServiceRole/Resource"
+      }
+    },
+    "AppSyncNotesHandlerServiceRoleDefaultPolicy12C70C4F": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "CDKPetTable901A88F2",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            },
+            {
+              "Action": "dynamodb:*",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "CDKPetTable901A88F2",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "AppSyncNotesHandlerServiceRoleDefaultPolicy12C70C4F",
+        "Roles": [
+          {
+            "Ref": "AppSyncNotesHandlerServiceRole34415D7F"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/AppSyncNotesHandler/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "AppSyncNotesHandler4B870A76": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3Bucket13B2F805"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3VersionKey23E2FD4A"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3VersionKey23E2FD4A"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "AppSyncNotesHandlerServiceRole34415D7F",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "DYNAMO_TABLE_NAME": {
+              "Ref": "CDKPetTable901A88F2"
+            },
+            "DynamoTable": {
+              "Ref": "CDKPetTable901A88F2"
+            }
+          }
+        },
+        "Handler": "index.handler",
+        "MemorySize": 1024,
+        "Runtime": "nodejs12.x"
+      },
+      "DependsOn": [
+        "AppSyncNotesHandlerServiceRoleDefaultPolicy12C70C4F",
+        "AppSyncNotesHandlerServiceRole34415D7F"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/AppSyncNotesHandler/Resource",
+        "aws:asset:path": "asset.68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90",
+        "aws:asset:property": "Code"
+      }
+    },
+    "theRuleee11DD74A3": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "PetEvents"
+          ]
+        },
+        "Name": "Rulesforpet",
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "AppSyncNotesHandler4B870A76",
+                "Arn"
+              ]
+            },
+            "Id": "Target0"
+          },
+          {
+            "Arn": {
+              "Ref": "stateMachineEventDrivenF9B53996"
+            },
+            "Id": "Target1",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "stateMachineEventDrivenEventsRole5B8B62CF",
+                "Arn"
+              ]
+            }
+          },
+          {
+            "Arn": {
+              "Ref": "MyTopic86869434"
+            },
+            "Id": "Target2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/the-Ruleee/Resource"
+      }
+    },
+    "theRuleeeAllowEventRuleServerStacktheRuleee3E4DA65B28D8247B": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "AppSyncNotesHandler4B870A76",
+            "Arn"
+          ]
+        },
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "theRuleee11DD74A3",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/the-Ruleee/AllowEventRuleServerStacktheRuleee3E4DA65B"
+      }
+    },
+    "LambdaRole3A44B857": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/LambdaRole/Resource"
+      }
+    },
+    "LambdaRoleDefaultPolicy75625A82": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ses:SendEmail",
+                "ses:SendRawEmail",
+                "logs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "LambdaRoleDefaultPolicy75625A82",
+        "Roles": [
+          {
+            "Ref": "LambdaRole3A44B857"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/LambdaRole/DefaultPolicy/Resource"
+      }
+    },
+    "HandleSendEmailE1602486": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3Bucket61E28678"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3VersionKey19179E5A"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3VersionKey19179E5A"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "LambdaRole3A44B857",
+            "Arn"
+          ]
+        },
+        "Handler": "lambda.handler",
+        "Runtime": "nodejs10.x"
+      },
+      "DependsOn": [
+        "LambdaRoleDefaultPolicy75625A82",
+        "LambdaRole3A44B857"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/HandleSendEmail/Resource",
+        "aws:asset:path": "asset.15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399",
+        "aws:asset:property": "Code"
+      }
+    },
+    "SendEmailEndPoint55D5887C": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "SendEmailEndPoint"
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Resource"
+      }
+    },
+    "SendEmailEndPointCloudWatchRoleC53822C2": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/CloudWatchRole/Resource"
+      }
+    },
+    "SendEmailEndPointAccount7AAD8855": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "SendEmailEndPointCloudWatchRoleC53822C2",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "SendEmailEndPoint55D5887C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Account"
+      }
+    },
+    "SendEmailEndPointDeploymentB02F3B1B404a216152210f821f6a3d4b9e6ea7d8": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "SendEmailEndPoint55D5887C"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "SendEmailEndPointsendmailPOSTAE8A0D70",
+        "SendEmailEndPointsendmail21CF08A1"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Deployment/Resource"
+      }
+    },
+    "SendEmailEndPointDeploymentStageprodAAD8A0FD": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "SendEmailEndPoint55D5887C"
+        },
+        "DeploymentId": {
+          "Ref": "SendEmailEndPointDeploymentB02F3B1B404a216152210f821f6a3d4b9e6ea7d8"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/DeploymentStage.prod/Resource"
+      }
+    },
+    "SendEmailEndPointsendmail21CF08A1": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "SendEmailEndPoint55D5887C",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "sendmail",
+        "RestApiId": {
+          "Ref": "SendEmailEndPoint55D5887C"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Default/sendmail/Resource"
+      }
+    },
+    "SendEmailEndPointsendmailPOSTApiPermissionServerStackSendEmailEndPointAA019828POSTsendmail79617573": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "HandleSendEmailE1602486",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "SendEmailEndPoint55D5887C"
+              },
+              "/",
+              {
+                "Ref": "SendEmailEndPointDeploymentStageprodAAD8A0FD"
+              },
+              "/POST/sendmail"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Default/sendmail/POST/ApiPermission.ServerStackSendEmailEndPointAA019828.POST..sendmail"
+      }
+    },
+    "SendEmailEndPointsendmailPOSTApiPermissionTestServerStackSendEmailEndPointAA019828POSTsendmail54451623": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "HandleSendEmailE1602486",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "SendEmailEndPoint55D5887C"
+              },
+              "/test-invoke-stage/POST/sendmail"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Default/sendmail/POST/ApiPermission.Test.ServerStackSendEmailEndPointAA019828.POST..sendmail"
+      }
+    },
+    "SendEmailEndPointsendmailPOSTAE8A0D70": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "SendEmailEndPointsendmail21CF08A1"
+        },
+        "RestApiId": {
+          "Ref": "SendEmailEndPoint55D5887C"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "HandleSendEmailE1602486",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/SendEmailEndPoint/Default/sendmail/POST/Resource"
+      }
+    },
+    "stateMachineEventDrivenRole87A8AFAA": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "states.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".amazonaws.com"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/stateMachineEventDriven/Role/Resource"
+      }
+    },
+    "stateMachineEventDrivenRoleDefaultPolicy672D97F0": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "HandleSendEmailE1602486",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AppSyncNotesHandler4B870A76",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "stateMachineEventDrivenRoleDefaultPolicy672D97F0",
+        "Roles": [
+          {
+            "Ref": "stateMachineEventDrivenRole87A8AFAA"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/stateMachineEventDriven/Role/DefaultPolicy/Resource"
+      }
+    },
+    "stateMachineEventDrivenF9B53996": {
+      "Type": "AWS::StepFunctions::StateMachine",
+      "Properties": {
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "stateMachineEventDrivenRole87A8AFAA",
+            "Arn"
+          ]
+        },
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{\"StartAt\":\"Invoke addData lambda\",\"States\":{\"Invoke addData lambda\":{\"Next\":\"Invoke ses lambda\",\"Retry\":[{\"ErrorEquals\":[\"Lambda.ServiceException\",\"Lambda.AWSLambdaException\",\"Lambda.SdkClientException\"],\"IntervalSeconds\":2,\"MaxAttempts\":6,\"BackoffRate\":2}],\"Type\":\"Task\",\"Resource\":\"arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":states:::lambda:invoke\",\"Parameters\":{\"FunctionName\":\"",
+              {
+                "Fn::GetAtt": [
+                  "HandleSendEmailE1602486",
+                  "Arn"
+                ]
+              },
+              "\",\"Payload.$\":\"$\"}},\"Invoke ses lambda\":{\"End\":true,\"Retry\":[{\"ErrorEquals\":[\"Lambda.ServiceException\",\"Lambda.AWSLambdaException\",\"Lambda.SdkClientException\"],\"IntervalSeconds\":2,\"MaxAttempts\":6,\"BackoffRate\":2}],\"Type\":\"Task\",\"Resource\":\"arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":states:::lambda:invoke\",\"Parameters\":{\"FunctionName\":\"",
+              {
+                "Fn::GetAtt": [
+                  "AppSyncNotesHandler4B870A76",
+                  "Arn"
+                ]
+              },
+              "\",\"Payload.$\":\"$\"}}}}"
+            ]
+          ]
+        }
+      },
+      "DependsOn": [
+        "stateMachineEventDrivenRoleDefaultPolicy672D97F0",
+        "stateMachineEventDrivenRole87A8AFAA"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/stateMachineEventDriven/Resource"
+      }
+    },
+    "stateMachineEventDrivenEventsRole5B8B62CF": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/stateMachineEventDriven/EventsRole/Resource"
+      }
+    },
+    "stateMachineEventDrivenEventsRoleDefaultPolicyF7E8B28A": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "states:StartExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "stateMachineEventDrivenF9B53996"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "stateMachineEventDrivenEventsRoleDefaultPolicyF7E8B28A",
+        "Roles": [
+          {
+            "Ref": "stateMachineEventDrivenEventsRole5B8B62CF"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/stateMachineEventDriven/EventsRole/DefaultPolicy/Resource"
+      }
+    },
+    "MyTopic86869434": {
+      "Type": "AWS::SNS::Topic",
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/MyTopic/Resource"
+      }
+    },
+    "MyTopic923158564614EA2C0232": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "sms",
+        "TopicArn": {
+          "Ref": "MyTopic86869434"
+        },
+        "Endpoint": "+923158564614"
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/MyTopic/+923158564614/Resource"
+      }
+    },
+    "MyTopicPolicy12A5EC17": {
+      "Type": "AWS::SNS::TopicPolicy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sns:Publish",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com"
+              },
+              "Resource": {
+                "Ref": "MyTopic86869434"
+              },
+              "Sid": "0"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Topics": [
+          {
+            "Ref": "MyTopic86869434"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/MyTopic/Policy/Resource"
+      }
+    },
+    "DeadLetterQueue9F481546": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "MessageRetentionPeriod": 1209600,
+        "QueueName": "MySubscription_DLQ"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/DeadLetterQueue/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.91.0,@aws-cdk/assets=1.91.0,@aws-cdk/aws-apigateway=1.91.0,@aws-cdk/aws-applicationautoscaling=1.91.0,@aws-cdk/aws-appsync=1.91.0,@aws-cdk/aws-autoscaling=1.91.0,@aws-cdk/aws-autoscaling-common=1.91.0,@aws-cdk/aws-autoscaling-hooktargets=1.91.0,@aws-cdk/aws-cloudwatch=1.91.0,@aws-cdk/aws-codebuild=1.91.0,@aws-cdk/aws-codeguruprofiler=1.91.0,@aws-cdk/aws-dynamodb=1.91.0,@aws-cdk/aws-ec2=1.91.0,@aws-cdk/aws-ecr=1.91.0,@aws-cdk/aws-ecr-assets=1.91.0,@aws-cdk/aws-ecs=1.91.0,@aws-cdk/aws-elasticloadbalancingv2=1.91.0,@aws-cdk/aws-events=1.91.0,@aws-cdk/aws-events-targets=1.91.0,@aws-cdk/aws-iam=1.91.0,@aws-cdk/aws-kms=1.91.0,@aws-cdk/aws-lambda=1.91.0,@aws-cdk/aws-logs=1.91.0,@aws-cdk/aws-s3=1.91.0,@aws-cdk/aws-s3-assets=1.91.0,@aws-cdk/aws-servicediscovery=1.91.0,@aws-cdk/aws-sns=1.91.0,@aws-cdk/aws-sns-subscriptions=1.91.0,@aws-cdk/aws-sqs=1.91.0,@aws-cdk/aws-ssm=1.91.0,@aws-cdk/aws-stepfunctions=1.91.0,@aws-cdk/aws-stepfunctions-tasks=1.91.0,@aws-cdk/cloud-assembly-schema=1.91.0,@aws-cdk/core=1.91.0,@aws-cdk/custom-resources=1.91.0,@aws-cdk/cx-api=1.91.0,@aws-cdk/region-info=1.91.0,jsii-runtime=node.js/v12.18.3"
+      },
+      "Metadata": {
+        "aws:cdk:path": "ServerStack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3Bucket13B2F805": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90\""
+    },
+    "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3VersionKey23E2FD4A": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90\""
+    },
+    "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90ArtifactHashBC0E6344": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90\""
+    },
+    "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3Bucket61E28678": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399\""
+    },
+    "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3VersionKey19179E5A": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399\""
+    },
+    "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399ArtifactHashB8067AFF": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399\""
+    }
+  },
+  "Outputs": {
+    "SendEmailEndPointEndpointE6D1DD47": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "SendEmailEndPoint55D5887C"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "SendEmailEndPointDeploymentStageprodAAD8A0FD"
+            },
+            "/"
+          ]
+        ]
+      }
+    },
+    "Sendemailendpoint": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "SendEmailEndPoint55D5887C"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "SendEmailEndPointDeploymentStageprodAAD8A0FD"
+            },
+            "/sendmail"
+          ]
+        ]
+      }
+    },
+    "GraphQLAPIURL": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ApiF70053CD",
+          "GraphQLUrl"
+        ]
+      }
+    },
+    "GraphQLAPIKey": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ApiDefaultApiKeyF991C37B",
+          "ApiKey"
+        ]
+      }
+    },
+    "StackRegion": {
+      "Value": {
+        "Ref": "AWS::Region"
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+type Event {
+  result: String
+}
+
+type report {
+  id: String
+  name: String
+  message: String
+ 
+}
+
+input ReportInput {
+  id: String
+  name: String
+  email: String
+  message:String
+}
+
+type Query {
+  getReports: [report]
+}
+
+type Mutation {
+  addReport(report: ReportInput!): Event
+}

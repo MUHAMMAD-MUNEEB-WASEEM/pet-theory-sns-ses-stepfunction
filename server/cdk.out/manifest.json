@@ -1,0 +1,1524 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "ServerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ServerStack.template.json"
+      },
+      "metadata": {
+        "/ServerStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90",
+              "id": "68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90",
+              "packaging": "zip",
+              "sourceHash": "68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90",
+              "s3BucketParameter": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3Bucket13B2F805",
+              "s3KeyParameter": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3VersionKey23E2FD4A",
+              "artifactHashParameter": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90ArtifactHashBC0E6344"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:84:23)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399",
+              "id": "15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399",
+              "packaging": "zip",
+              "sourceHash": "15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399",
+              "s3BucketParameter": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3Bucket61E28678",
+              "s3KeyParameter": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3VersionKey19179E5A",
+              "artifactHashParameter": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399ArtifactHashB8067AFF"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:123:25)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiF70053CD",
+            "trace": [
+              "new GraphqlApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:416:16)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:23:24)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/Schema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiSchema510EECD7",
+            "trace": [
+              "Schema.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\schema.ts:80:21)",
+              "new GraphqlApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:431:39)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:23:24)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/DefaultApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDefaultApiKeyF991C37B",
+            "trace": [
+              "GraphqlApi.createAPIKey (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:571:12)",
+              "new GraphqlApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:437:34)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:23:24)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/thePetTable/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApithePetTableServiceRoleA36CC740",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new BaseDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:111:47)",
+              "new BackedDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:158:5)",
+              "new DynamoDbDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:208:5)",
+              "GraphqlApi.addDynamoDbDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:165:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:42:32)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/thePetTable/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApithePetTableServiceRoleDefaultPolicyD7E7D976",
+            "trace": [
+              "new Policy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "Table.combinedGrant (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:910:29)",
+              "Table.grantReadWriteData (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:685:17)",
+              "new DynamoDbDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:219:19)",
+              "GraphqlApi.addDynamoDbDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:165:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:42:32)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/thePetTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApithePetTable3840958B",
+            "trace": [
+              "new BaseDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:114:15)",
+              "new BackedDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:158:5)",
+              "new DynamoDbDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:208:5)",
+              "GraphqlApi.addDynamoDbDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:165:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:42:32)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/thePetTable/QuerygetReportsResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApithePetTableQuerygetReportsResolver4632C2A2",
+            "trace": [
+              "new Resolver (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\resolver.ts:89:21)",
+              "DynamoDbDataSource.createResolver (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:129:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:44:13)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/ds/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApidsServiceRoleADC7D124",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new BaseDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:111:47)",
+              "new BackedDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:158:5)",
+              "new HttpDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:266:5)",
+              "GraphqlApi.addHttpDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:181:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:52:31)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/ds/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApidsServiceRoleDefaultPolicyE5E18D6D",
+            "trace": [
+              "new Policy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "Function.grantPutEvents (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events\\lib\\event-bus.ts:150:22)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:64:21)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/ds/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Apids0DB53FEA",
+            "trace": [
+              "new BaseDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:114:15)",
+              "new BackedDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:158:5)",
+              "new HttpDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:266:5)",
+              "GraphqlApi.addHttpDataSource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:181:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:52:31)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Api/ds/MutationaddReportResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApidsMutationaddReportResolverC760D141",
+            "trace": [
+              "new Resolver (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\resolver.ts:89:21)",
+              "HttpDataSource.createResolver (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:129:12)",
+              "C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:76:14",
+              "Array.forEach (<anonymous>)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:68:15)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/CDKPetTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKPetTable901A88F2",
+            "trace": [
+              "new Table (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:1096:18)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:34:28)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AppSyncNotesHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AppSyncNotesHandlerServiceRole34415D7F",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:552:31)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:84:23)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AppSyncNotesHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AppSyncNotesHandlerServiceRoleDefaultPolicy12C70C4F",
+            "trace": [
+              "new Policy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "Table.combinedGrant (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:910:29)",
+              "Table.grantReadWriteData (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:685:17)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:93:20)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AppSyncNotesHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AppSyncNotesHandler4B870A76",
+            "trace": [
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:614:35)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:84:23)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AssetParameters/68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3Bucket13B2F805",
+            "trace": [
+              "new FileAssetParameters (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:84:23)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AssetParameters/68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90S3VersionKey23E2FD4A",
+            "trace": [
+              "new FileAssetParameters (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:84:23)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AssetParameters/68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters68030f7c2ac62a1b7342d5e5d4c63c3b521e02395c2a3f6c19035eb13e2c2d90ArtifactHashBC0E6344",
+            "trace": [
+              "new FileAssetParameters (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:84:23)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AssetParameters/15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3Bucket61E28678",
+            "trace": [
+              "new FileAssetParameters (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:123:25)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AssetParameters/15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399S3VersionKey19179E5A",
+            "trace": [
+              "new FileAssetParameters (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:123:25)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/AssetParameters/15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters15fb8cc06b98631d9b1f38b8a1c8717fa7dda3fa5c53dff8d5ba505666461399ArtifactHashB8067AFF",
+            "trace": [
+              "new FileAssetParameters (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:74:19)",
+              "ServerStack.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:78:25)",
+              "new Asset (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:151:40)",
+              "AssetCode.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:251:20)",
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:572:29)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:123:25)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/the-Ruleee/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "theRuleee11DD74A3",
+            "trace": [
+              "new Rule (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.ts:130:22)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:99:18)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/the-Ruleee/AllowEventRuleServerStacktheRuleee3E4DA65B": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "theRuleeeAllowEventRuleServerStacktheRuleee3E4DA65B28D8247B",
+            "trace": [
+              "Function.addPermission (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:245:5)",
+              "Object.addLambdaPermission (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\util.ts:44:13)",
+              "LambdaFunction.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\lambda.ts:33:5)",
+              "Rule.addTarget (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.ts:166:32)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:107:10)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/LambdaRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaRole3A44B857",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:110:18)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/LambdaRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaRoleDefaultPolicy75625A82",
+            "trace": [
+              "new Policy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Role.addToPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:376:17)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:120:10)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/HandleSendEmail/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HandleSendEmailE1602486",
+            "trace": [
+              "new Function (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:614:35)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:123:25)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPoint55D5887C",
+            "trace": [
+              "new RestApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:694:22)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:131:17)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointCloudWatchRoleC53822C2",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "RestApi.configureCloudWatchRole (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:494:18)",
+              "new RestApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:711:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:131:17)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointAccount7AAD8855",
+            "trace": [
+              "RestApi.configureCloudWatchRole (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:499:22)",
+              "new RestApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:711:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:131:17)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointDeploymentB02F3B1B404a216152210f821f6a3d4b9e6ea7d8",
+            "trace": [
+              "new Deployment (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\deployment.ts:75:21)",
+              "RestApi.configureDeployment (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:510:32)",
+              "new RestApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:714:10)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:131:17)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointDeploymentStageprodAAD8A0FD",
+            "trace": [
+              "new Stage (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\stage.ts:240:22)",
+              "RestApi.configureDeployment (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:520:30)",
+              "new RestApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:714:10)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:131:17)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointEndpointE6D1DD47",
+            "trace": [
+              "RestApi.configureDeployment (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:525:7)",
+              "new RestApi (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:714:10)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:131:17)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Default/sendmail/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointsendmail21CF08A1",
+            "trace": [
+              "new Resource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:446:22)",
+              "RootResource.addResource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:183:12)",
+              "RootResource.resourceForPath (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:362:23)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:134:8)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Default/sendmail/POST/ApiPermission.ServerStackSendEmailEndPointAA019828.POST..sendmail": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointsendmailPOSTApiPermissionServerStackSendEmailEndPointAA019828POSTsendmail79617573",
+            "trace": [
+              "Function.addPermission (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:245:5)",
+              "LambdaIntegration.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.ts:63:18)",
+              "new Method (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:197:36)",
+              "Resource.addMethod (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:187:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:135:8)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Default/sendmail/POST/ApiPermission.Test.ServerStackSendEmailEndPointAA019828.POST..sendmail": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointsendmailPOSTApiPermissionTestServerStackSendEmailEndPointAA019828POSTsendmail54451623",
+            "trace": [
+              "Function.addPermission (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:245:5)",
+              "LambdaIntegration.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.ts:71:20)",
+              "new Method (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:197:36)",
+              "Resource.addMethod (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:187:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:135:8)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/SendEmailEndPoint/Default/sendmail/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SendEmailEndPointsendmailPOSTAE8A0D70",
+            "trace": [
+              "new Method (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:215:22)",
+              "Resource.addMethod (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:187:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:135:8)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Send email endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Sendemailendpoint",
+            "trace": [
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:139:5)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/stateMachineEventDriven/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stateMachineEventDrivenRole87A8AFAA",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "new StateMachine (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.ts:382:31)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:164:20)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/stateMachineEventDriven/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stateMachineEventDrivenRoleDefaultPolicy672D97F0",
+            "trace": [
+              "new Policy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "StateMachine.addToRolePolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.ts:426:15)",
+              "new StateMachine (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.ts:403:12)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:164:20)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/stateMachineEventDriven/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stateMachineEventDrivenF9B53996",
+            "trace": [
+              "new StateMachine (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.ts:391:22)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:164:20)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/stateMachineEventDriven/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stateMachineEventDrivenEventsRole5B8B62CF",
+            "trace": [
+              "new Role (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:327:18)",
+              "Object.singletonEventRole (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\util.ts:21:16)",
+              "new SfnStateMachine (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\state-machine.ts:36:31)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:172:18)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/stateMachineEventDriven/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stateMachineEventDrivenEventsRoleDefaultPolicyF7E8B28A",
+            "trace": [
+              "new Policy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:368:28)",
+              "Function.addToPrincipal (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:168:61)",
+              "StateMachine.grantStartExecution (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.ts:160:22)",
+              "new SfnStateMachine (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\state-machine.ts:37:13)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:172:18)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/MyTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTopic86869434",
+            "trace": [
+              "new Topic (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic.ts:100:22)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:176:21)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/MyTopic/+923158564614/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTopic923158564614EA2C0232",
+            "trace": [
+              "new Subscription (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\lib\\subscription.ts:108:5)",
+              "Topic.addSubscription (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:84:5)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:185:13)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/MyTopic/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTopicPolicy12A5EC17",
+            "trace": [
+              "new TopicPolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\lib\\policy.ts:35:5)",
+              "Topic.addToResourcePolicy (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:99:21)",
+              "Function.addToPrincipalOrResource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:147:45)",
+              "Topic.grantPublish (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:119:22)",
+              "SnsTopic.bind (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\sns.ts:39:16)",
+              "Rule.addTarget (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.ts:166:32)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:191:10)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/DeadLetterQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeadLetterQueue9F481546",
+            "trace": [
+              "new Queue (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\aws-sqs\\lib\\queue.ts:277:19)",
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:179:21)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/GraphQLAPIURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GraphQLAPIURL",
+            "trace": [
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:194:5)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/GraphQLAPIKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GraphQLAPIKey",
+            "trace": [
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:199:5)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/Stack Region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StackRegion",
+            "trace": [
+              "new ServerStack (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\lib\\server-stack.ts:204:5)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\bin\\server.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/ServerStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:51:24)",
+              "C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:140:5",
+              "visit (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:201:5)",
+              "visit (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:197:5)",
+              "injectMetadataResources (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:131:3)",
+              "Object.synthesize (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:188:23)",
+              "process.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/ServerStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:60:27)",
+              "C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:140:5",
+              "visit (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:201:5)",
+              "visit (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:197:5)",
+              "injectMetadataResources (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:131:3)",
+              "Object.synthesize (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:188:23)",
+              "process.<anonymous> (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (C:\\Github_1\\Aws\\AWS CDK\\pet-theory-aws\\server\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
